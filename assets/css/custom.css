@@ -1,0 +1,45 @@
+/* Custom styles to make sidebar larger */
+
+/* Increase sidebar image size */
+.sidebar .author__avatar img {
+  max-width: 250px !important; /* Increased from 175px */
+  border-radius: 50%;
+}
+
+/* Increase sidebar name font size */
+.sidebar .author__name {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.5em !important; /* Increased from type-size-5 (1em) */
+  font-weight: bold;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+/* Increase sidebar bio font size */
+.sidebar .author__bio {
+  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+  line-height: 1.6 !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+}
+
+/* Increase sidebar location, employer, etc. font size */
+.sidebar .author__urls {
+  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+}
+
+.sidebar .author__urls li {
+  margin-bottom: 8px !important;
+}
+
+/* Increase sidebar headings */
+.sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
+  font-size: 1.3em !important; /* Increased from type-size-5 (1em) */
+  font-weight: bold;
+}
+
+/* Increase sidebar paragraph and list text */
+.sidebar p, .sidebar li {
+  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+  line-height: 1.6 !important;
+} 
