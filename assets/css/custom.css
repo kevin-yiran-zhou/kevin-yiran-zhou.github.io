@@ -2,22 +2,22 @@
 
 /* Increase sidebar image size */
 .sidebar .author__avatar img {
-  max-width: 250px !important; /* Increased from 175px */
-  border-radius: 50%;
+  max-width: 200px !important; /* Reduced from 300px */
+  border-radius: 0 !important; /* Make image square instead of round */
 }
 
 /* Increase sidebar name font size */
 .sidebar .author__name {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 1.5em !important; /* Increased from type-size-5 (1em) */
-  font-weight: bold;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif !important;
+  font-size: 1.1em !important; /* Reduced from 1.8em */
+  font-weight: bold !important;
   margin-top: 15px !important;
   margin-bottom: 15px !important;
 }
 
 /* Increase sidebar bio font size */
 .sidebar .author__bio {
-  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+  font-size: 0.9em !important; /* Reduced from 1.3em */
   line-height: 1.6 !important;
   margin-top: 15px !important;
   margin-bottom: 25px !important;
@@ -25,7 +25,7 @@
 
 /* Increase sidebar location, employer, etc. font size */
 .sidebar .author__urls {
-  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+  font-size: 0.9em !important; /* Reduced from 1.3em */
 }
 
 .sidebar .author__urls li {
@@ -34,12 +34,12 @@
 
 /* Increase sidebar headings */
 .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
-  font-size: 1.3em !important; /* Increased from type-size-5 (1em) */
-  font-weight: bold;
+  font-size: 0.9em !important; /* Reduced from 1.5em */
+  font-weight: bold !important;
 }
 
 /* Increase sidebar paragraph and list text */
 .sidebar p, .sidebar li {
-  font-size: 1.1em !important; /* Increased from type-size-6 (0.75em) */
+  font-size: 0.9em !important; /* Reduced from 1.3em */
   line-height: 1.6 !important;
 } 
