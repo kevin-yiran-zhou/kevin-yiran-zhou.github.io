@@ -16,7 +16,8 @@ DSC_2528.jpeg,
 DSC_2225.jpg,
 DSC_2097.jpg,
 DSC_1860.jpg,
-DSC_1466.jpg
+DSC_1466.jpg, 
+DSC_0104.JPG
 " | split: "," %}
 
 <div class="photo-gallery" style="margin: 2rem 0;">
