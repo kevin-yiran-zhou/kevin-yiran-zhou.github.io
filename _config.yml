@@ -229,6 +229,10 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  photos:
+    output: true
+    permalink: /:collection/:path/
+    exclude: ["*.jpg", "*.jpeg", "*.JPEG". "*.png", "*.gif", "*.webp"]
 
 
 # These settings control how pages and collections are included in the site
