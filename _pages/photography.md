@@ -11,27 +11,38 @@ author_profile: true
 ## Highlights
 
 <!-- Photo list - add new photos here in desired order -->
-{% assign photos = "
-DSC_3105.NEF,
-DSC_3077.JPG,
-DSC_2528.jpeg,
-DSC_2225.jpg,
-DSC_2097.jpg,
-DSC_1860.jpg,
-DSC_1466.jpg, 
-DSC_0104.JPG
+<!-- Format: filename|location -->
+{% assign photo_data = "
+DSC_3105.NEF|Glacier National Park, MT,
+DSC_3077.JPG|Glacier National Park, MT,
+DSC_2528.jpeg|Pointe Mouillee, MI,
+DSC_2225.jpg|Olympic National Park, WA,
+DSC_2097.jpg|Seattle, WA,
+DSC_1860.jpg|Clearwater Beach, FL,
+DSC_1466.jpg|Chicago, IL, 
+DSC_0104.JPG|Lake Hudson, MI
 " | split: "," %}
 
 <div class="photo-gallery" style="margin: 2rem 0;">
   <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-    {% for photo in photos %}
-      {% assign photo_trimmed = photo | strip %}
-      {% if photo_trimmed != "" %}
-        <div class="photo-item" style="position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 1; cursor: pointer;" onclick="openModal('/photos/{{ photo_trimmed }}')">
-          <img src="/photos/{{ photo_trimmed }}"
-               alt="Photography by Kevin"
-               style="width: 100%; height: 100%; object-fit: contain; display: block;"
-               loading="lazy">
+    {% for photo_entry in photo_data %}
+      {% assign photo_entry_trimmed = photo_entry | strip %}
+      {% if photo_entry_trimmed != "" %}
+        {% assign photo_parts = photo_entry_trimmed | split: "|" %}
+        {% assign filename = photo_parts[0] | strip %}
+        {% assign location = photo_parts[1] | strip %}
+        <div class="photo-item" style="border-radius: 8px; overflow: hidden; background: #f8f9fa;">
+          <div style="position: relative; aspect-ratio: 1; cursor: pointer;" onclick="openModal('/photos/{{ filename }}')">
+            <img src="/photos/{{ filename }}"
+                 alt="Photography by Kevin"
+                 style="width: 100%; height: 100%; object-fit: contain; display: block;"
+                 loading="lazy">
+          </div>
+          {% if location != "" %}
+            <div style="padding: 0.75rem; text-align: center; background: #f8f9fa; border-top: 1px solid #e9ecef;">
+              <span style="font-size: 0.9rem; color: #6c757d; font-style: italic;">{{ location }}</span>
+            </div>
+          {% endif %}
         </div>
       {% endif %}
     {% endfor %}
