@@ -13,15 +13,15 @@ author_profile: true
 <!-- Photo list - add new photos here in desired order -->
 <!-- Format: filename|location -->
 {% assign photo_data = "
-DSC_3105.NEF|Glacier National Park, MT,
-DSC_3077.JPG|Glacier National Park, MT,
-DSC_2528.jpeg|Pointe Mouillee, MI,
-DSC_2225.jpg|Olympic National Park, WA,
-DSC_2097.jpg|Seattle, WA,
-DSC_1860.jpg|Clearwater Beach, FL,
-DSC_1466.jpg|Chicago, IL, 
+DSC_3105.NEF|Glacier National Park, MT
+DSC_3077.JPG|Glacier National Park, MT
+DSC_2528.jpeg|Pointe Mouillee, MI
+DSC_2225.jpg|Olympic National Park, WA
+DSC_2097.jpg|Seattle, WA
+DSC_1860.jpg|Clearwater Beach, FL
+DSC_1466.jpg|Chicago, IL
 DSC_0104.JPG|Lake Hudson, MI
-" | split: "," %}
+" | split: "\n" %}
 
 <div class="photo-gallery" style="margin: 2rem 0;">
   <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
@@ -31,16 +31,16 @@ DSC_0104.JPG|Lake Hudson, MI
         {% assign photo_parts = photo_entry_trimmed | split: "|" %}
         {% assign filename = photo_parts[0] | strip %}
         {% assign location = photo_parts[1] | strip %}
-        <div class="photo-item" style="border-radius: 8px; overflow: hidden; background: #f8f9fa;">
-          <div style="position: relative; aspect-ratio: 1; cursor: pointer;" onclick="openModal('/photos/{{ filename }}')">
+        <div class="photo-item">
+          <div style="position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 1; cursor: pointer;" onclick="openModal('/photos/{{ filename }}')">
             <img src="/photos/{{ filename }}"
                  alt="Photography by Kevin"
                  style="width: 100%; height: 100%; object-fit: contain; display: block;"
                  loading="lazy">
           </div>
           {% if location != "" %}
-            <div style="padding: 0.75rem; text-align: center; background: #f8f9fa; border-top: 1px solid #e9ecef;">
-              <span style="font-size: 0.9rem; color: #6c757d; font-style: italic;">{{ location }}</span>
+            <div style="padding: 0.5rem 0; text-align: center;">
+              <span style="font-family: inherit; font-size: 0.9rem; color: #52565c;">{{ location }}</span>
             </div>
           {% endif %}
         </div>
