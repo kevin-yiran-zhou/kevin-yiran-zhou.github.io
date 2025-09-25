@@ -12,6 +12,9 @@ author_profile: true
 
 <!-- Photo list - add new photos here in desired order -->
 {% assign photos = "
+DSC_3105.NEF
+DSC_3077.JPG
+DSC_2970.JPG
 DSC_2528.jpeg,
 DSC_2225.jpg,
 DSC_2097.jpg,
