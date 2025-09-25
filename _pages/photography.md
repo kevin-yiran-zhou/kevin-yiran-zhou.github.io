@@ -10,44 +10,45 @@ author_profile: true
 
 ## Highlights
 
-<!-- Photo list - add new photos here in desired order -->
-<!-- Format: filename|location -->
-{% assign photo_data = "
-DSC_3105.NEF|Glacier National Park, MT
-DSC_3077.JPG|Glacier National Park, MT
-DSC_2528.jpeg|Pointe Mouillee, MI
-DSC_2225.jpg|Olympic National Park, WA
-DSC_2097.jpg|Seattle, WA
-DSC_1860.jpg|Clearwater Beach, FL
-DSC_1466.jpg|Chicago, IL
-DSC_0104.JPG|Lake Hudson, MI
-" | split: "\n" %}
-
-<div class="photo-gallery" style="margin: 2rem 0;">
-  <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-    {% for photo_entry in photo_data %}
-      {% assign photo_entry_trimmed = photo_entry | strip %}
-      {% if photo_entry_trimmed != "" %}
-        {% assign photo_parts = photo_entry_trimmed | split: "|" %}
-        {% assign filename = photo_parts[0] | strip %}
-        {% assign location = photo_parts[1] | strip %}
-        <div class="photo-item">
-          <div style="position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 1; cursor: pointer;" onclick="openModal('/photos/{{ filename }}')">
-            <img src="/photos/{{ filename }}"
-                 alt="Photography by Kevin"
-                 style="width: 100%; height: 100%; object-fit: contain; display: block;"
-                 loading="lazy">
-          </div>
-          {% if location != "" %}
-            <div style="padding: 0.5rem 0; text-align: center;">
-              <span style="font-family: inherit; font-size: 0.9rem; color: #52565c;">{{ location }}</span>
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_3105.NEF')">
+  <img src="/photos/DSC_3105.NEF" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
 </div>
+**Glacier National Park, MT**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_3077.JPG')">
+  <img src="/photos/DSC_3077.JPG" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Glacier National Park, MT**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_2528.jpeg')">
+  <img src="/photos/DSC_2528.jpeg" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Pointe Mouillee, MI**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_2225.jpg')">
+  <img src="/photos/DSC_2225.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Olympic National Park, WA**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_2097.jpg')">
+  <img src="/photos/DSC_2097.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Seattle, WA**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_1860.jpg')">
+  <img src="/photos/DSC_1860.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Clearwater Beach, FL**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_1466.jpg')">
+  <img src="/photos/DSC_1466.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Chicago, IL**
+
+<div style="position: relative; overflow: hidden; border-radius: 8px; margin: 1rem 0; cursor: pointer;" onclick="openModal('/photos/DSC_0104.JPG')">
+  <img src="/photos/DSC_0104.JPG" alt="Photography by Kevin" style="width: 100%; height: auto; object-fit: contain; display: block;" loading="lazy">
+</div>
+**Lake Hudson, MI**
 
 <!-- Modal for full-screen image viewing -->
 <div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
