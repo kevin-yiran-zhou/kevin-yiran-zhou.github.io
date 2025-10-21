@@ -59,34 +59,56 @@ author_profile: true
 
 
 <!-- Modal for full-screen image viewing -->
-<div id="imageModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
-  <span style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;" onclick="closeModal()">&times;</span>
-  <img id="modalImage" style="margin: auto; display: block; max-width: 90%; max-height: 90%; margin-top: 5%;" src="" alt="Full size image">
+<div id="imageModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); cursor: pointer;">
+  <span style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10000;" onclick="closeModal()">&times;</span>
+  <img id="modalImage" style="margin: auto; display: block; max-width: 95%; max-height: 95%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: default;" src="" alt="Full size image">
 </div>
 
 <script>
-function openModal(imageSrc) {
-  document.getElementById('modalImage').src = imageSrc;
-  document.getElementById('imageModal').style.display = 'block';
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
-}
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Define modal functions
+  window.openModal = function(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    if (modal && modalImage) {
+      modalImage.src = imageSrc;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+  };
 
-function closeModal() {
-  document.getElementById('imageModal').style.display = 'none';
-  document.body.style.overflow = 'auto'; // Restore scrolling
-}
+  window.closeModal = function() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+  };
 
-// Close modal when clicking outside the image
-document.getElementById('imageModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeModal();
+  // Close modal when clicking outside the image
+  const modal = document.getElementById('imageModal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        window.closeModal();
+      }
+    });
   }
-});
 
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeModal();
+  // Prevent modal image from closing modal when clicked
+  const modalImage = document.getElementById('modalImage');
+  if (modalImage) {
+    modalImage.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
   }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      window.closeModal();
+    }
+  });
 });
 </script>
