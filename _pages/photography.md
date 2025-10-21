@@ -11,8 +11,8 @@ author_profile: true
 ## Highlights
 
 <div style="margin: 2rem 0;">
-  <a href="/photos/DSC_3105.NEF" target="_blank">
-    <img src="/photos/DSC_3105.NEF" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+  <a href="/photos/DSC_3105.jpeg" target="_blank">
+    <img src="/photos/DSC_3105.jpeg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
   </a>
   <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Glacier National Park, MT</p>
 </div>
