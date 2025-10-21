@@ -10,59 +10,108 @@ author_profile: true
 
 ## Highlights
 
-<div style="margin: 2rem 0;">
+<style>
+.photo-container {
+  position: relative;
+  margin: 2rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.photo-container a {
+  display: block;
+  position: relative;
+}
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.photo-container:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.8);
+}
+
+.location-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.photo-container:hover .location-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<div class="photo-container">
   <a href="/photos/DSC_3105.jpeg" target="_blank">
-    <img src="/photos/DSC_3105.jpeg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_3105.jpeg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Glacier National Park, MT</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Glacier National Park, MT</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_3077.JPG" target="_blank">
-    <img src="/photos/DSC_3077.JPG" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_3077.JPG" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Glacier National Park, MT</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Glacier National Park, MT</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_2528.jpeg" target="_blank">
-    <img src="/photos/DSC_2528.jpeg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_2528.jpeg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Pointe Mouillee, MI</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Pointe Mouillee, MI</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_2225.jpg" target="_blank">
-    <img src="/photos/DSC_2225.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_2225.jpg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Olympic National Park, WA</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Olympic National Park, WA</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_2097.jpg" target="_blank">
-    <img src="/photos/DSC_2097.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_2097.jpg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Seattle, WA</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Seattle, WA</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_1860.jpg" target="_blank">
-    <img src="/photos/DSC_1860.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_1860.jpg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Clearwater Beach, FL</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Clearwater Beach, FL</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_1466.jpg" target="_blank">
-    <img src="/photos/DSC_1466.jpg" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_1466.jpg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Chicago, IL</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Chicago, IL</p>
 </div>
 
-<div style="margin: 2rem 0;">
+<div class="photo-container">
   <a href="/photos/DSC_0104.JPG" target="_blank">
-    <img src="/photos/DSC_0104.JPG" alt="Photography by Kevin" style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.2s ease;" loading="lazy">
+    <img src="/photos/DSC_0104.JPG" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">Lake Hudson, MI</div>
   </a>
-  <p style="margin: 0.5rem 0 0 0; font-weight: bold;">Lake Hudson, MI</p>
 </div>
 
