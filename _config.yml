@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Yiran (Kevin) Zhou"
 title_separator          : "-"
 name                     : &name "Yiran (Kevin) Zhou"
-description              : # &description "Master's student in Robotics at University of Michigan, Ann Arbor"
+description              : # &description "Master's student in Robotics at University of Michigan, Ann Arbor".
 url                      : https://kevin-yiran-zhou.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "kevin-yiran-zhou/kevin-yiran-zhou.github.io"
@@ -126,7 +126,7 @@ atom_feed:
 
 
 # SEO Related
-google_site_verification :
+google_site_verification : "hywQe1jQNu_Fqo17ooFeqlgDD8c2paOrHYHEhIesCEU"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
