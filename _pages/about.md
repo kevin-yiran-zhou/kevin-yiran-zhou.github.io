@@ -14,4 +14,4 @@ I am currently a PhD student in Robotics at the **University of Michigan**, work
 
 Previously, I earned my Bachelor's degree from **New York University** in Mathematics with a minor in Computer Science. During my undergraduate studies, I worked as a research assistant in the **[VMIL/REACTIV Lab](https://rizz0lab.wordpress.com/)** led by Professor John Ross Rizzo, where I contributed to the UNav project for enhancing mobility for individuals with blindness and low vision.
 
-On my webpage, you can explore the work I've done. I hope you find the content insightful and informative. Feel free to reach out if you'd like to connect!
+Feel free to reach out if you'd like to connect!
