@@ -46,16 +46,16 @@ author_profile: true
   border-radius: 6px;
   font-weight: 500;
   font-size: 14px;
-  opacity: 0;
-  transform: translateY(-10px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   z-index: 10;
 }
 
 .photo-container:hover .location-overlay {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 0;
+  transform: translateY(-10px);
 }
 </style>
 
