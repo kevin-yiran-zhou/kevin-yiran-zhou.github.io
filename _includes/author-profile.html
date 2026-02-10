@@ -15,11 +15,10 @@
   </div>
 
   <div class="author__content">
-    {% unless page.permalink == "/" or page.url == "/" %}
-      <h3 class="author__name">{{ author.name }}</h3>
-    {% endunless %}
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {%- comment -%}
+      Name, pronouns, and bio intentionally hidden so the sidebar only shows
+      the avatar and links, keeping the layout consistent on all pages.
+    {%- endcomment -%}
   </div>
 
   <div class="author__urls-wrapper">
