@@ -60,6 +60,13 @@ author_profile: true
 </style>
 
 <div class="photo-container">
+  <a href="/photos/mix.jpg" target="_blank">
+    <img src="/photos/mix.jpg" alt="Photography by Kevin" loading="lazy">
+    <div class="location-overlay">New York City, NY</div>
+  </a>
+</div>
+
+<div class="photo-container">
   <a href="/photos/DSC_3105.jpeg" target="_blank">
     <img src="/photos/DSC_3105.jpeg" alt="Photography by Kevin" loading="lazy">
     <div class="location-overlay">Glacier National Park, MT</div>
