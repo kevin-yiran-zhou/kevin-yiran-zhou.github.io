@@ -1,6 +1,7 @@
 ---
 permalink: /
 author_profile: true
+title: "Yiran (Kevin) Zhou"
 redirect_from: 
   - /about/
   - /about.html
