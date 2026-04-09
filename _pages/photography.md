@@ -11,11 +11,20 @@ author_profile: true
 ## Highlights
 
 <style>
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+  align-items: start;
+}
+
 .photo-container {
   position: relative;
-  margin: 2rem 0;
-  display: inline-block;
+  margin: 0;
+  display: block;
   width: 100%;
+  min-width: 0;
 }
 
 .photo-container a {
@@ -58,6 +67,8 @@ author_profile: true
   transform: translateY(-10px);
 }
 </style>
+
+<div class="photo-gallery">
 
 <div class="photo-container">
   <a href="/photos/mix.jpg" target="_blank">
@@ -120,5 +131,7 @@ author_profile: true
     <img src="/photos/DSC_0104.JPG" alt="Photography by Kevin" loading="lazy">
     <div class="location-overlay">Lake Hudson, MI</div>
   </a>
+</div>
+
 </div>
 
