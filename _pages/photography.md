@@ -14,10 +14,16 @@ author_profile: true
 /* Longest edge of each photo = square side (capped on wide screens). Tune 300px if you like. */
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 1.25rem;
   align-items: start;
+}
+
+@media (min-width: 600px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .photo-container {
