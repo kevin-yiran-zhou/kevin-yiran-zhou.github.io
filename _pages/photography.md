@@ -11,6 +11,7 @@ author_profile: true
 ## Highlights
 
 <style>
+/* Longest edge of each photo = square side (capped on wide screens). Tune 300px if you like. */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -22,7 +23,8 @@ author_profile: true
 .photo-container {
   position: relative;
   margin: 0;
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   min-width: 0;
 }
@@ -30,12 +32,18 @@ author_profile: true
 .photo-container a {
   display: block;
   position: relative;
+  width: min(100%, 300px);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .photo-container img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: contain;
   display: block;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
