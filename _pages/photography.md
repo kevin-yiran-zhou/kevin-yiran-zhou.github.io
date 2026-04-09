@@ -11,11 +11,11 @@ author_profile: true
 ## Highlights
 
 <style>
-/* Longest edge of each photo = square side (capped on wide screens). Tune 300px if you like. */
+/* Square tile per photo; longest edge = column width. object-fit: contain keeps aspect ratio. */
 .photo-gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-top: 1.25rem;
   align-items: start;
 }
@@ -38,7 +38,7 @@ author_profile: true
 .photo-container a {
   display: block;
   position: relative;
-  width: min(100%, 300px);
+  width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 8px;
