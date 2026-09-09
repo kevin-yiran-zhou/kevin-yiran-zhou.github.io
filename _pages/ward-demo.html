@@ -1,33 +1,39 @@
 ---
-layout: archive
-title: "WARD Demo"
+layout: null
 permalink: /publications/ward-demo/
-author_profile: true
 ---
-
-{% include base_path %}
-
-<p style="margin-bottom: 0.35rem;"><strong>WARD: A Vision-Only Framework for Water-Surface Awareness and Risk Detection</strong></p>
-<p style="margin: 0.2rem 0;"><strong>Yiran Zhou</strong>, Zheng Wang, Tianai Yan, Sacchin Sundar, Katherine A. Skinner</p>
-<p style="margin: 0.2rem 0;">OCEANS 2026</p>
-
-<style>
-.ward-demo-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.ward-demo-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
-</style>
-
-<div class="ward-demo-gallery">
-  <img src="{{ '/images/ward/example1.gif' | relative_url }}" alt="WARD demo: boat detection, segmentation, and risk visualization">
-  <img src="{{ '/images/ward/example2.gif' | relative_url }}" alt="WARD demo: water-surface awareness with status SAFE">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WARD Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    .gifs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="gifs">
+    <img src="{{ '/images/ward/example1.gif' | relative_url }}" alt="WARD demo 1">
+    <img src="{{ '/images/ward/example2.gif' | relative_url }}" alt="WARD demo 2">
+  </div>
+</body>
+</html>
