@@ -7,21 +7,44 @@ permalink: /publications/ward-demo/
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WARD Demo</title>
+  <title>WARD</title>
   <style>
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       padding: 0;
       background: #fff;
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 16px 16px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.15rem, 2.4vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .authors,
+    .affiliation {
+      margin: 0;
+      font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+      line-height: 1.5;
+    }
+    .authors {
+      margin-bottom: 4px;
     }
     .gifs {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      padding: 12px;
-      max-width: 1400px;
-      margin: 0 auto;
     }
     img {
       width: 100%;
@@ -31,9 +54,16 @@ permalink: /publications/ward-demo/
   </style>
 </head>
 <body>
-  <div class="gifs">
-    <img src="{{ '/images/ward/example1.gif' | relative_url }}" alt="WARD demo 1">
-    <img src="{{ '/images/ward/example2.gif' | relative_url }}" alt="WARD demo 2">
+  <div class="page">
+    <header>
+      <h1>WARD: A Vision-Only Framework for Water-Surface Awareness and Risk Detection</h1>
+      <p class="authors">Yiran Zhou, Zheng Wang, Tianai Yan, Sacchin Sundar, Katherine A. Skinner</p>
+      <p class="affiliation">The Robotics Department, University of Michigan, Ann Arbor, USA</p>
+    </header>
+    <div class="gifs">
+      <img src="{{ '/images/ward/example1.gif' | relative_url }}" alt="WARD demo 1">
+      <img src="{{ '/images/ward/example2.gif' | relative_url }}" alt="WARD demo 2">
+    </div>
   </div>
 </body>
 </html>
