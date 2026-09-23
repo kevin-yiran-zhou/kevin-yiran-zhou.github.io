@@ -81,6 +81,12 @@ author_profile: true
       <span class="photo-play-button"></span>
     </a>
   </div>
+  <div class="photo-container">
+    <a href="/photos/whale_tail.html" target="_blank" aria-label="Play Monterey Bay, CA">
+      <img src="/photos/whale_tail.jpg" alt="Monterey Bay, CA" loading="lazy">
+      <span class="photo-play-button"></span>
+    </a>
+  </div>
 </div>
 
 <h2>New York City, NY</h2>
