@@ -10,41 +10,38 @@ author_profile: true
 
 <style>
 .photo-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   margin: 0.75rem 0 0.25rem;
-  align-items: start;
-}
-
-@media (min-width: 600px) {
-  .photo-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 .photo-container {
-  margin: 0;
   width: 100%;
-  min-width: 0;
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
 }
 
 .photo-container a {
-  display: block;
   position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 8px;
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.page__content .photo-container a:hover {
+  text-decoration: none;
 }
 
 .photo-container img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 100cqi;
+  max-height: 100cqi;
+  border-radius: 8px;
 }
 
 .page__content .photo-container a:hover img {
@@ -52,19 +49,39 @@ author_profile: true
   transform: none;
 }
 
-.photo-video {
-  display: block;
-  width: 100%;
-  margin: 0.75rem 0 0.25rem;
-  border-radius: 8px;
-  background: #000;
+.photo-play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.photo-play-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 0.7rem 0 0.7rem 1.2rem;
+  border-color: transparent transparent transparent #fff;
 }
 </style>
 
 <h2>Monterey Bay, CA</h2>
-<video class="photo-video" autoplay loop muted playsinline>
-  <source src="/photos/whale_jump.mp4" type="video/mp4">
-</video>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/whale_jump.html" target="_blank" aria-label="Play Monterey Bay, CA">
+      <img src="/photos/whale_jump.jpg" alt="Monterey Bay, CA" loading="lazy">
+      <span class="photo-play-button"></span>
+    </a>
+  </div>
+</div>
 
 <h2>New York City, NY</h2>
 <div class="photo-gallery">
