@@ -8,15 +8,12 @@ author_profile: true
   <i class="fab fa-instagram"></i> My Instagram photography page
 </a>
 
-## Highlights
-
 <style>
-/* Square tile per photo; longest edge = column width. object-fit: contain keeps aspect ratio. */
 .photo-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
-  margin-top: 1.25rem;
+  margin: 0.75rem 0 0.25rem;
   align-items: start;
 }
 
@@ -27,10 +24,7 @@ author_profile: true
 }
 
 .photo-container {
-  position: relative;
   margin: 0;
-  display: flex;
-  justify-content: center;
   width: 100%;
   min-width: 0;
 }
@@ -51,101 +45,100 @@ author_profile: true
   height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.photo-container:hover img {
-  transform: scale(1.02);
-  filter: brightness(0.8);
+.page__content .photo-container a:hover img {
+  box-shadow: none;
+  transform: none;
 }
 
-.location-overlay {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 14px;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.photo-container:hover .location-overlay {
-  opacity: 0;
-  transform: translateY(-10px);
+.photo-video {
+  display: block;
+  width: 100%;
+  margin: 0.75rem 0 0.25rem;
+  border-radius: 8px;
+  background: #000;
 }
 </style>
 
+<h2>Monterey Bay, CA</h2>
+<video class="photo-video" autoplay loop muted playsinline>
+  <source src="/photos/whale_jump.mp4" type="video/mp4">
+</video>
+
+<h2>New York City, NY</h2>
 <div class="photo-gallery">
-
-<div class="photo-container">
-  <a href="/photos/mix.jpg" target="_blank">
-    <img src="/photos/mix.jpg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">New York City, NY</div>
-  </a>
+  <div class="photo-container">
+    <a href="/photos/mix.jpg" target="_blank">
+      <img src="/photos/mix.jpg" alt="New York City, NY" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_3105.jpeg" target="_blank">
-    <img src="/photos/DSC_3105.jpeg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Glacier National Park, MT</div>
-  </a>
+<h2>Glacier National Park, MT</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_3105.jpeg" target="_blank">
+      <img src="/photos/DSC_3105.jpeg" alt="Glacier National Park, MT" loading="lazy">
+    </a>
+  </div>
+  <div class="photo-container">
+    <a href="/photos/DSC_3077.JPG" target="_blank">
+      <img src="/photos/DSC_3077.JPG" alt="Glacier National Park, MT" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_3077.JPG" target="_blank">
-    <img src="/photos/DSC_3077.JPG" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Glacier National Park, MT</div>
-  </a>
+<h2>Pointe Mouillee, MI</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_2528.jpeg" target="_blank">
+      <img src="/photos/DSC_2528.jpeg" alt="Pointe Mouillee, MI" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_2528.jpeg" target="_blank">
-    <img src="/photos/DSC_2528.jpeg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Pointe Mouillee, MI</div>
-  </a>
+<h2>Olympic National Park, WA</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_2225.jpg" target="_blank">
+      <img src="/photos/DSC_2225.jpg" alt="Olympic National Park, WA" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_2225.jpg" target="_blank">
-    <img src="/photos/DSC_2225.jpg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Olympic National Park, WA</div>
-  </a>
+<h2>Seattle, WA</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_2097.jpg" target="_blank">
+      <img src="/photos/DSC_2097.jpg" alt="Seattle, WA" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_2097.jpg" target="_blank">
-    <img src="/photos/DSC_2097.jpg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Seattle, WA</div>
-  </a>
+<h2>Clearwater Beach, FL</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_1860.jpg" target="_blank">
+      <img src="/photos/DSC_1860.jpg" alt="Clearwater Beach, FL" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_1860.jpg" target="_blank">
-    <img src="/photos/DSC_1860.jpg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Clearwater Beach, FL</div>
-  </a>
+<h2>Chicago, IL</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_1466.jpg" target="_blank">
+      <img src="/photos/DSC_1466.jpg" alt="Chicago, IL" loading="lazy">
+    </a>
+  </div>
 </div>
 
-<div class="photo-container">
-  <a href="/photos/DSC_1466.jpg" target="_blank">
-    <img src="/photos/DSC_1466.jpg" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Chicago, IL</div>
-  </a>
+<h2>Lake Hudson, MI</h2>
+<div class="photo-gallery">
+  <div class="photo-container">
+    <a href="/photos/DSC_0104.JPG" target="_blank">
+      <img src="/photos/DSC_0104.JPG" alt="Lake Hudson, MI" loading="lazy">
+    </a>
+  </div>
 </div>
-
-<div class="photo-container">
-  <a href="/photos/DSC_0104.JPG" target="_blank">
-    <img src="/photos/DSC_0104.JPG" alt="Photography by Kevin" loading="lazy">
-    <div class="location-overlay">Lake Hudson, MI</div>
-  </a>
-</div>
-
-</div>
-

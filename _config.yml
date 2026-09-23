@@ -232,7 +232,7 @@ collections:
   photos:
     output: true
     permalink: /:collection/:path/
-    exclude: ["*.jpg", "*.JPG", "*.jpeg", "*.JPEG", "*.png", "*.gif", "*.webp"]
+    exclude: ["*.jpg", "*.JPG", "*.jpeg", "*.JPEG", "*.png", "*.gif", "*.webp", "*.mp4", "*.MP4"]
 
 
 # These settings control how pages and collections are included in the site
