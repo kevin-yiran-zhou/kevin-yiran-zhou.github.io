@@ -4,8 +4,9 @@ title: "Photography"
 author_profile: true
 ---
 
-<a href="https://www.instagram.com/photo_by_kevinz/" target="_blank" style="color: #e4405f; text-decoration: none; font-weight: 500;">
-  <i class="fab fa-instagram"></i> My Instagram photography page
+<a href="https://www.instagram.com/photo_by_kevinz/" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-instagram" aria-hidden="true"></i> My Instagram photography page
+  <span class="screen-reader-text">(opens in a new tab)</span>
 </a>
 
 <style>
@@ -33,6 +34,11 @@ author_profile: true
 
 .page__content .photo-container a:hover {
   text-decoration: none;
+}
+
+.photo-container a:focus-visible {
+  outline: 3px solid #f89406;
+  outline-offset: 4px;
 }
 
 .photo-container img {
@@ -76,15 +82,17 @@ author_profile: true
 <h2>Monterey Bay, CA</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/whale_jump.html" target="_blank" aria-label="Play Monterey Bay, CA">
-      <img src="/photos/whale_jump.jpg" alt="Monterey Bay, CA" loading="lazy">
-      <span class="photo-play-button"></span>
+    <a href="/photos/whale_jump.html" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/whale_jump.jpg" alt="Play video: a humpback whale rises straight out of calm water, head and throat up, with a distant shoreline under a cloudy sky. Monterey Bay, California." loading="lazy">
+      <span class="photo-play-button" aria-hidden="true"></span>
+      <span class="screen-reader-text">(opens in a new tab)</span>
     </a>
   </div>
   <div class="photo-container">
-    <a href="/photos/whale_tail.html" target="_blank" aria-label="Play Monterey Bay, CA">
-      <img src="/photos/whale_tail.jpg" alt="Monterey Bay, CA" loading="lazy">
-      <span class="photo-play-button"></span>
+    <a href="/photos/whale_tail.html" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/whale_tail.jpg" alt="Play video: a whale tail lifts out of the water, one fluke pale and the other dark, against a hazy horizon. Monterey Bay, California." loading="lazy">
+      <span class="photo-play-button" aria-hidden="true"></span>
+      <span class="screen-reader-text">(opens in a new tab)</span>
     </a>
   </div>
 </div>
@@ -92,8 +100,9 @@ author_profile: true
 <h2>New York City, NY</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/mix.jpg" target="_blank">
-      <img src="/photos/mix.jpg" alt="New York City, NY" loading="lazy">
+    <a href="/photos/mix.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/mix.jpg" alt="A nine-photo winter collage of New York City, mostly black and white with yellow subjects: a traffic light, McDonald's arches, a halal food cart, a woman in a yellow coat, the Rockefeller Center Prometheus statue, yellow taxis, a lion dance costume, a food cart, and a dog in a yellow coat." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -101,13 +110,15 @@ author_profile: true
 <h2>Glacier National Park, MT</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_3105.jpeg" target="_blank">
-      <img src="/photos/DSC_3105.jpeg" alt="Glacier National Park, MT" loading="lazy">
+    <a href="/photos/DSC_3105.jpeg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_3105.jpeg" alt="The Milky Way stretches over dark mountain silhouettes, with a thin meteor streak in the sky. Glacier National Park, Montana." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
   <div class="photo-container">
-    <a href="/photos/DSC_3077.JPG" target="_blank">
-      <img src="/photos/DSC_3077.JPG" alt="Glacier National Park, MT" loading="lazy">
+    <a href="/photos/DSC_3077.JPG" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_3077.JPG" alt="A still alpine lake reflects steep rocky peaks and a thin crescent moon at dusk, with dark evergreen forest along the shore. Glacier National Park, Montana." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -115,8 +126,9 @@ author_profile: true
 <h2>Pointe Mouillee, MI</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_2528.jpeg" target="_blank">
-      <img src="/photos/DSC_2528.jpeg" alt="Pointe Mouillee, MI" loading="lazy">
+    <a href="/photos/DSC_2528.jpeg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_2528.jpeg" alt="A speckled black bird stands on a green lotus seed pod, holding an insect, with large lotus leaves and a white lotus bud behind it. Pointe Mouillee, Michigan." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -124,8 +136,9 @@ author_profile: true
 <h2>Olympic National Park, WA</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_2225.jpg" target="_blank">
-      <img src="/photos/DSC_2225.jpg" alt="Olympic National Park, WA" loading="lazy">
+    <a href="/photos/DSC_2225.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_2225.jpg" alt="White water drops through mossy rocks in a narrow gorge, surrounded by dense evergreen forest. Olympic National Park, Washington." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -133,8 +146,9 @@ author_profile: true
 <h2>Seattle, WA</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_2097.jpg" target="_blank">
-      <img src="/photos/DSC_2097.jpg" alt="Seattle, WA" loading="lazy">
+    <a href="/photos/DSC_2097.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_2097.jpg" alt="A flock of gulls fills the sky above the red Public Market Center sign at Pike Place Market, with globe street lamps and market umbrellas below. Seattle, Washington." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -142,8 +156,9 @@ author_profile: true
 <h2>Clearwater Beach, FL</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_1860.jpg" target="_blank">
-      <img src="/photos/DSC_1860.jpg" alt="Clearwater Beach, FL" loading="lazy">
+    <a href="/photos/DSC_1860.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_1860.jpg" alt="Silhouettes of people and gulls on a beach at sunset, with the sun on the horizon over the water. Clearwater Beach, Florida." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -151,8 +166,9 @@ author_profile: true
 <h2>Chicago, IL</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_1466.jpg" target="_blank">
-      <img src="/photos/DSC_1466.jpg" alt="Chicago, IL" loading="lazy">
+    <a href="/photos/DSC_1466.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_1466.jpg" alt="Night view down a Chicago street from an elevated train, showing a train and its reflection in the window, streetlights, and people crossing below." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>
@@ -160,8 +176,9 @@ author_profile: true
 <h2>Lake Hudson, MI</h2>
 <div class="photo-gallery">
   <div class="photo-container">
-    <a href="/photos/DSC_0104.JPG" target="_blank">
-      <img src="/photos/DSC_0104.JPG" alt="Lake Hudson, MI" loading="lazy">
+    <a href="/photos/DSC_0104.JPG" target="_blank" rel="noopener noreferrer">
+      <img src="/photos/DSC_0104.JPG" alt="The Milky Way rises above a dark tree line, with a faint glow along the horizon. Lake Hudson, Michigan." loading="lazy">
+      <span class="screen-reader-text">(opens full size in a new tab)</span>
     </a>
   </div>
 </div>

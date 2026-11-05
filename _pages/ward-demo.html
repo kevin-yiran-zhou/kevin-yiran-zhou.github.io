@@ -20,7 +20,7 @@ permalink: /publications/ward-demo/
     .page {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 20px 16px 16px;
+      padding: 20px 16px 32px;
     }
     header {
       text-align: center;
@@ -33,23 +33,53 @@ permalink: /publications/ward-demo/
       line-height: 1.3;
     }
     .authors,
-    .affiliation {
+    .affiliation,
+    .back {
       margin: 0;
-      font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
       line-height: 1.5;
     }
     .authors {
       margin-bottom: 4px;
     }
-    .gifs {
+    .back {
+      margin-top: 12px;
+    }
+    .back a {
+      color: #146073;
+    }
+    .back a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #f89406;
+      outline-offset: 2px;
+    }
+    .examples {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 28px;
+    }
+    figure {
+      margin: 0;
     }
     img {
       width: 100%;
       height: auto;
       display: block;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+    button {
+      margin-top: 8px;
+      padding: 0.45rem 0.8rem;
+      font: inherit;
+      color: #111;
+      background: #fff;
+      border: 2px solid #111;
+      border-radius: 4px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -59,11 +89,65 @@ permalink: /publications/ward-demo/
       <h1>WARD: A Vision-Only Framework for Water-Surface Awareness and Risk Detection</h1>
       <p class="authors">Yiran Zhou, Zheng Wang, Tianai Yan, Sacchin Sundar, Katherine A. Skinner</p>
       <p class="affiliation">The Robotics Department, University of Michigan, Ann Arbor, USA</p>
+      <p class="back"><a href="/publications/">Back to publications</a></p>
     </header>
-    <div class="gifs">
-      <img src="{{ '/images/ward/example1.gif' | relative_url }}" alt="WARD demo 1">
-      <img src="{{ '/images/ward/example2.gif' | relative_url }}" alt="WARD demo 2">
+    <div class="examples">
+      <figure>
+        <img id="ward-1" src="{{ '/images/ward/example1.gif' | relative_url }}" alt="Three panels of open water. Left: a boat camera view with a green banner reading STATUS: SAFE and a distance readout. Middle: a segmentation map with green sky, a red band, and blue water. Right: a thermal view, orange above the horizon and dark purple below.">
+        <figcaption>
+          Example 1. The camera view is labeled safe. The middle panel separates sky, a surface band, and water. The right panel is a thermal view of the horizon.
+          <button type="button" aria-pressed="false" data-pause="ward-1">Pause animation</button>
+        </figcaption>
+      </figure>
+      <figure>
+        <img id="ward-2" src="{{ '/images/ward/example2.gif' | relative_url }}" alt="Three panels of a harbor. Left: a boat camera view of a shoreline with buildings and a green banner reading STATUS: SAFE. Middle: a segmentation map with green sky, a red band, and blue water. Right: a thermal view, bright orange above and dark blue-purple below.">
+        <figcaption>
+          Example 2. The camera looks toward a built shoreline and is labeled safe. The middle and right panels again show the segmentation and thermal views.
+          <button type="button" aria-pressed="false" data-pause="ward-2">Pause animation</button>
+        </figcaption>
+      </figure>
     </div>
   </div>
+  <script>
+    function freezeFrame(img) {
+      var canvas = document.createElement("canvas");
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      canvas.getContext("2d").drawImage(img, 0, 0);
+      img.dataset.src = img.getAttribute("src");
+      img.src = canvas.toDataURL("image/png");
+      img.dataset.paused = "true";
+    }
+
+    document.querySelectorAll("[data-pause]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var img = document.getElementById(button.getAttribute("data-pause"));
+        if (!img) return;
+        if (img.dataset.paused === "true") {
+          img.src = img.dataset.src;
+          img.dataset.paused = "false";
+          button.textContent = "Pause animation";
+          button.setAttribute("aria-pressed", "false");
+        } else {
+          freezeFrame(img);
+          button.textContent = "Play animation";
+          button.setAttribute("aria-pressed", "true");
+        }
+      });
+    });
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.addEventListener("load", function () {
+        document.querySelectorAll("[data-pause]").forEach(function (button) {
+          var img = document.getElementById(button.getAttribute("data-pause"));
+          if (img && img.dataset.paused !== "true") {
+            freezeFrame(img);
+            button.textContent = "Play animation";
+            button.setAttribute("aria-pressed", "true");
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>

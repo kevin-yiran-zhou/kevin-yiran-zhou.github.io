@@ -17,11 +17,12 @@ layout: compress
   </head>
 
   <body class="cv-layout">
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     <div id="main" role="main">
-      <div class="container">
+      <div id="main-content" class="container" tabindex="-1">
         {{ content }}
       </div>
     </div>

@@ -191,15 +191,25 @@
 
   button {
     position: absolute;
-    height: 2.5rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
     right: 0;
     padding: 0 0.5rem;
     border: 0;
-    outline: none;
-    background-color: var(--global-base-color);
+    border-radius: $border-radius;
+    background-color: #1f2930;
     color: #fff;
     cursor: pointer;
     z-index: 100;
+
+    &:focus-visible {
+      outline: 3px solid #f89406;
+      outline-offset: 2px;
+    }
+  }
+
+  button:not(.hidden) + .visible-links {
+    padding-right: 3.25rem;
   }
 
   .visible-links {
@@ -226,11 +236,28 @@
     }
 
     #theme-toggle {
-      a {
-        width: 25px;
+      button {
+        position: static;
+        width: 2.75rem;
+        height: 2.75rem;
+        min-width: 2.75rem;
         display: flex;
+        align-items: center;
         justify-content: center;
+        margin: 0 0 0 0.5rem;
+        padding: 0;
+        border: 0;
+        border-radius: $border-radius;
+        background: transparent;
+        color: var(--global-masthead-link-color);
         cursor: pointer;
+        font-size: 1.05rem;
+        line-height: 1;
+
+        &:focus-visible {
+          outline: 3px solid #f89406;
+          outline-offset: 2px;
+        }
       }
     }
 
@@ -268,7 +295,7 @@
     padding: 5px;
     border: 1px solid var(--global-border-color);
     border-radius: $border-radius;
-    background: #fff;
+    background: var(--global-bg-color);
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -303,7 +330,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #fff transparent;
+      border-color: var(--global-bg-color) transparent;
       display: block;
       z-index: 1;
     }

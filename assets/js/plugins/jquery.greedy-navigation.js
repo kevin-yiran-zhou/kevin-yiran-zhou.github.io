@@ -6,7 +6,7 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $('#site-nav > button');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
@@ -52,6 +52,8 @@ function updateNav() {
       $btn.addClass('hidden');
       $btn.removeClass('close');
       $hlinks.addClass('hidden');
+      $btn.attr('aria-expanded', 'false');
+      $btn.attr('aria-label', 'Open menu');
     }
   }
 
@@ -61,7 +63,7 @@ function updateNav() {
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
   $('body').css('padding-top', mastheadHeight + 'px');
-  if ($(".author__urls-wrapper button").is(":visible")) {
+  if (window.innerWidth < 1024) {
     $(".sidebar").css("padding-top", "");
   } else {
     $(".sidebar").css("padding-top", mastheadHeight + "px");
@@ -81,6 +83,9 @@ screen.orientation.addEventListener("change", function () {
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  var open = !$hlinks.hasClass('hidden');
+  $(this).attr('aria-expanded', open ? 'true' : 'false');
+  $(this).attr('aria-label', open ? 'Close menu' : 'Open menu');
 });
 
 updateNav();
