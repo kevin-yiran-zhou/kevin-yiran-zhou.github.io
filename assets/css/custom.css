@@ -242,4 +242,83 @@ html[data-theme="dark"] .greedy-nav > button {
 
 .greedy-nav .hidden-links {
   background: var(--global-bg-color);
+}
+
+/* Same-origin navigations keep the masthead, contacts, and footer in place
+   and only fade the article. Browsers without cross-document view transitions
+   still do a normal load. */
+@view-transition {
+  navigation: auto;
+}
+
+.masthead {
+  view-transition-name: site-masthead;
+}
+
+.sidebar {
+  view-transition-name: site-sidebar;
+}
+
+.page__footer {
+  view-transition-name: site-footer;
+}
+
+#main-content {
+  view-transition-name: site-content;
+}
+
+::view-transition-group(site-masthead),
+::view-transition-group(site-sidebar),
+::view-transition-group(site-footer) {
+  animation: none;
+  z-index: 10;
+}
+
+::view-transition-old(site-masthead),
+::view-transition-old(site-sidebar),
+::view-transition-old(site-footer),
+::view-transition-old(root) {
+  display: none;
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(site-masthead),
+::view-transition-new(site-sidebar),
+::view-transition-new(site-footer) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(site-content) {
+  animation: site-content-out 160ms ease both;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(site-content) {
+  animation: site-content-in 160ms ease both;
+  mix-blend-mode: normal;
+}
+
+@keyframes site-content-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes site-content-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
 } 
