@@ -92,13 +92,13 @@
   }
 
   .sidebar .author__avatar {
-    flex: 0 0 7.5rem;
-    width: 7.5rem;
+    flex: 0 0 10.5rem;
+    width: 10.5rem;
   }
 
   .sidebar .author__avatar img {
-    width: 7.5rem;
-    max-width: 7.5rem !important;
+    width: 10.5rem;
+    max-width: 10.5rem !important;
   }
 
   .sidebar .author__urls-wrapper {
@@ -109,6 +109,12 @@
 
   .sidebar .author__urls li {
     white-space: normal;
+  }
+}
+
+@media (min-width: 925px) {
+  .sidebar .author__avatar {
+    margin-bottom: 1.25rem;
   }
 }
 
