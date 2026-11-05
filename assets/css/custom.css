@@ -32,6 +32,10 @@
   margin-bottom: 8px !important;
 }
 
+.sidebar .author__urls li.author__email {
+  white-space: normal;
+}
+
 /* Increase sidebar headings */
 .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
   font-size: 0.9em !important; /* Reduced from 1.5em */
